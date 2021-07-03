@@ -1,0 +1,272 @@
+/* GENERAL */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* SITE HEADER  */
+
+.site-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: darkcyan;
+}
+
+.site-head__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-site {
+  display: block;
+}
+
+.button__burger {
+  background-color: transparent;
+  border: none;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/burger-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sitenav {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 90px;
+  height: calc(100vh - 90px);
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: auto;
+  /* background-image: linear-gradient(0, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 55.94%); */
+  text-align: center;
+}
+
+.sitenav--active {
+  display: block;
+}
+
+.sitenav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-top: 35px;
+}
+.sitenav__item {
+  margin-bottom: 25px;
+}
+.sitenav__link {
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  opacity: 0.8;
+  font-size: 22px;
+}
+
+.site-content {
+  flex-grow: 1;
+}
+
+.convert__head {
+  margin-bottom: 60px;
+  margin-top: 50px;
+  color: darkcyan;
+}
+
+.btn-submit {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+  border: none;
+  background-color: darkcyan;
+  color: white;
+  padding: 12px 40px;
+  border-radius: 6px;
+  margin-bottom: 50px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-submit:hover{
+  background-color: hsla(180, 100%, 27%, 0.8);
+
+}
+
+.btn-submit:active{
+  opacity: 0.6;
+}
+
+.form-label {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(129, 126, 126);
+  text-align: left;
+}
+
+.input-text {
+  margin-top: 10px;
+  width: 100%;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  outline: none;
+  resize: none;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.input-text:focus {
+  box-shadow: 0px 0px 1px 1px lightseagreen;
+  border: lightseagreen;
+}
+
+.input-text:last-child {
+  margin-bottom: 0;
+}
+
+/* SITE FOOTER  */
+
+.site-footer {
+  background-color: darkcyan;
+  padding: 50px 25px 30px 25px;
+}
+
+.site-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sitenav__list {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-footer__img {
+  margin-bottom: 35px;
+}
+
+@media only screen and (min-width: 760px) {
+  .button__burger {
+    display: none;
+  }
+
+  .form-group__wrap {
+    display: flex;
+  }
+
+  .input-text {
+    width: 370px;
+  }
+
+  .site-head__wrapper {
+    align-items: center;
+  }
+
+  .sitenav {
+    display: block;
+    position: static;
+    z-index: 1;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+    text-align: end;
+    height: auto;
+    width: auto;
+  }
+
+  .sitenav__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .sitenav__item {
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .sitenav__link {
+    font-size: 11px;
+    line-height: 17px;
+    letter-spacing: 0.923077px;
+    text-transform: uppercase;
+  }
+
+  .sitenav__link:hover {
+    color: rgb(1, 1, 36);
+  }
+
+  #input_text1, #input_text2{
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    resize: none;
+    width: 400px;
+    border: none;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  #input_text1:focus , #input_text2:focus{
+    outline: none;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  button{
+    border: none;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+
+  button:hover{
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  button:active{
+    opacity: 0.6;
+  }
+  @media only screen and (min-width: 1000px) {
+
+    .input-text {
+      width: 540px;
+    }
+  }
+
+}
